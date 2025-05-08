@@ -25,6 +25,7 @@ const Controller = class {
     }
 
     async drawHome() {
+        contentDiv.replaceChildren();
         const data = await this.fetchJsonData('data/restaurant-info.json');
 
         const container = document.createElement('div');
@@ -35,12 +36,12 @@ const Controller = class {
         header.textContent = data.restaurant.name;        
         container.append(header);
 
-        const description = document.createElement('h2');
+        const description = document.createElement('strong');
         description.classList.add('description');
         description.textContent = data.restaurant.description;
         container.append(description);
 
-        const about = document.createElement('h2');
+        const about = document.createElement('em');
         about.classList.add('about');
         about.textContent = data.restaurant.about;
         container.append(about);
@@ -50,7 +51,42 @@ const Controller = class {
     }
 
     async drawContact() {
+        contentDiv.replaceChildren();
         const data = await this.fetchJsonData('data/contact.json');
+
+        const container = document.createElement('div');
+        container.classList.add('contact-container');
+
+        const openingHoursContainer = document.createElement('div');
+        for (const [key, value] of Object.entries(data.opening_hours)) {
+            const day = document.createElement('div');
+            day.textContent = key;
+            day.classList.add('day');
+            const openingHoursElement = document.createElement('div');
+            openingHoursElement.textContent = value;
+            openingHoursElement.classList.add('opening-hours');
+
+            openingHoursContainer.append(day);
+            openingHoursContainer.append(openingHoursElement);
+        }
+
+        container.append(openingHoursContainer);
+
+        const contactContainer = document.createElement('div');
+        for (const [key, value] of Object.entries(data.contact_info)) {
+            const contactType = document.createElement('div');
+            contactType.classList.add('contact-type');
+            contactType.textContent = key;
+            const contactValue = document.createElement('div');
+            contactValue.classList.add('contact-value');
+            contactValue.textContent = value;
+
+            contactContainer.append(contactType);
+            contactContainer.append(contactValue);
+        }
+        container.append(contactContainer);
+
+        contentDiv.append(container);
 
     }
 
