@@ -1,0 +1,21 @@
+{
+  "opening_hours": {
+      "monday": "11:00 - 21:00",
+      "tuesday": "11:00 - 21:00",
+      "wednesday": "11:00 - 21:00",
+      "thursday": "11:00 - 22:00",
+      "friday": "11:00 - 23:00",
+      "saturday": "12:00 - 23:00",
+      "sunday": "12:00 - 20:00"
+    },
+    "contact_info": {
+      "phone": "+1-555-123-4567",
+      "email": "info@fusionfranks.com",
+      "address": "123 Flavor Blvd, Foodie Town, NY 10001",
+      "website": "https://www.fusionfranks.com",
+      "social": {
+        "instagram": "@fusionfranks",
+        "facebook": "facebook.com/fusionfranks"
+      }
+    }
+  }

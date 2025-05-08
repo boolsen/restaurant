@@ -2,25 +2,6 @@
   "restaurant": {
     "name": "Fusion Frank's",
     "description": "A bold take on global street food, specializing in creative hot-dog fusion cuisine.",
-    "about": "At Fusion Frank’s, we blend the comfort of the classic American hot dog with flavors from around the world. Whether it’s Korean kimchi, Vietnamese banh mi, or a Tex-Mex twist, every dish is crafted to surprise your taste buds. We’re passionate about reinventing traditions and serving up unexpected flavor combinations in a fun, casual setting.",
-    "opening_hours": {
-      "monday": "11:00 - 21:00",
-      "tuesday": "11:00 - 21:00",
-      "wednesday": "11:00 - 21:00",
-      "thursday": "11:00 - 22:00",
-      "friday": "11:00 - 23:00",
-      "saturday": "12:00 - 23:00",
-      "sunday": "12:00 - 20:00"
-    },
-    "contact_info": {
-      "phone": "+1-555-123-4567",
-      "email": "info@fusionfranks.com",
-      "address": "123 Flavor Blvd, Foodie Town, NY 10001",
-      "website": "https://www.fusionfranks.com",
-      "social": {
-        "instagram": "@fusionfranks",
-        "facebook": "facebook.com/fusionfranks"
-      }
-    }
+    "about": "At Fusion Frank’s, we blend the comfort of the classic American hot dog with flavors from around the world. Whether it’s Korean kimchi, Vietnamese banh mi, or a Tex-Mex twist, every dish is crafted to surprise your taste buds. We’re passionate about reinventing traditions and serving up unexpected flavor combinations in a fun, casual setting."
   }
 }
