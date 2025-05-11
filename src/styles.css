@@ -1,40 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Archivo', sans-serif;
+}
+
+:root {
+    --bg: rgb(0, 1, 26);
+    --txt-clr: rgb(233, 246, 253);
+    --accent-clr: rgb(84, 145, 179);
+    --button-border-width: 4px;
 }
 
 em {
     display: block;
 }
 
-h1 {
-    margin: 2rem 0px;
-    padding: 0;
+body {
+    background: var(--bg);
+    color: var(--txt-clr);
+    width: 100svw;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+
+    position: relative;
+    
+    &::after {
+        content: '';
+        display: block;
+        height: var(--button-border-width);
+        background-color: var(--accent-clr);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+}
+
+button {
+    background: var(--bg);
+    color: var(--txt-clr);
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-bottom: var(--button-border-width) solid transparent;
+    border-right: var(--button-border-width) solid transparent;
+    border-top: none;
+    border-left: none;
+    border-bottom-right-radius: 5%;
+    font-size: 1.5rem;
+
+    &:hover {
+        border-bottom: var(--button-border-width) solid var(--accent-clr);
+        border-right: var(--button-border-width) solid var(--accent-clr);
+    }
 }
 
 header {
     display: flex;
+    flex: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
   
     nav > * {
-      margin: 0 10px;
+      margin: 10px 10px;
     }
   
     &::after {
       content: '';
       display: block;
       height: 1px;
-      background-color: black;
+      background-color: var(--txt-clr);
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      margin: 0 100px;
+      margin: 0 10%;
     }
   }
 
@@ -45,3 +95,7 @@ header {
     gap: 20px;
     justify-content: center;
   }
+
+  /* Home */
+
+  
