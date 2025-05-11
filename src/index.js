@@ -59,6 +59,9 @@ const Controller = class {
 
         const openingHoursContainer = document.createElement('div');
         for (const [key, value] of Object.entries(data.opening_hours)) {
+            const openingDayGroup = document.createElement('div');
+            openingDayGroup.classList.add('opening-day-group');
+
             const day = document.createElement('div');
             day.textContent = key;
             day.classList.add('day');
@@ -66,14 +69,19 @@ const Controller = class {
             openingHoursElement.textContent = value;
             openingHoursElement.classList.add('opening-hours');
 
-            openingHoursContainer.append(day);
-            openingHoursContainer.append(openingHoursElement);
+            openingDayGroup.append(day);
+            openingDayGroup.append(openingHoursElement);
+
+            openingHoursContainer.append(openingDayGroup);
         }
 
         container.append(openingHoursContainer);
 
         const contactContainer = document.createElement('div');
         for (const [key, value] of Object.entries(data.contact_info)) {
+            const contactGroup = document.createElement('div');
+            contactGroup.classList.add('contact-group');
+
             const contactType = document.createElement('div');
             contactType.classList.add('contact-type');
             contactType.textContent = key;
@@ -81,8 +89,10 @@ const Controller = class {
             contactValue.classList.add('contact-value');
             contactValue.textContent = value;
 
-            contactContainer.append(contactType);
-            contactContainer.append(contactValue);
+            contactGroup.append(contactType);
+            contactGroup.append(contactValue);
+
+            contactContainer.append(contactGroup);
         }
         container.append(contactContainer);
 
