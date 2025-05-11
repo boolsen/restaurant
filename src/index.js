@@ -91,7 +91,50 @@ const Controller = class {
     }
 
     async drawMenu() {
+        contentDiv.replaceChildren();
+        const data = await this.fetchJsonData('data/menu-items.json');
 
+        const container = document.createElement('div');
+        container.classList.add('menu-container');
+        
+
+        const menuItemsContainer = document.createElement('div');
+        for (const [key, value] of Object.entries(data.menu)) {
+            const menuGroup = document.createElement('div');
+            menuGroup.classList.add('menu-group');
+
+            const menuGroupHeader = document.createElement('h2');
+            menuGroupHeader.textContent = this.capitalizeFirstLetterReplaceUnderscore(key);
+            menuGroupHeader.classList.add('menu-group-header');
+            menuGroup.append(menuGroupHeader);
+
+            for (const item of value) {
+                
+                const menuItem = document.createElement('div');
+                menuItem.classList.add('menu-item');
+
+                const name = document.createElement('h3');
+                name.classList.add('menu-item-name');
+                name.textContent = item.name;
+
+                const description = document.createElement('em');
+                description.classList.add('menu-item-description');
+                description.textContent = item.description;
+
+                const price = document.createElement('p');
+                price.classList.add('menu-item-price');
+                price.textContent = item.price;
+                
+                const allergens = document.createElement('em');
+                allergens.classList.add('menu-item-allergens');
+                allergens.textContent = item.allergens;
+
+                menuItem.append(name,description,price,allergens);  
+                menuGroup.append(menuItem);              
+            }
+            container.append(menuGroup);
+        }
+        contentDiv.append(container);
     }
 
     async fetchJsonData(filename) {
@@ -105,6 +148,11 @@ const Controller = class {
             console.error('Error loading JSON:' + filename, error);
             return null;
         }
+    }
+
+    capitalizeFirstLetterReplaceUnderscore(val) {
+        val = val.replace('_', ' ');
+        return String(val).charAt(0).toUpperCase() + String(val).slice(1);
     }
 
     static getInstance() {
