@@ -55,9 +55,10 @@ const Controller = class {
         const data = await this.fetchJsonData('data/contact.json');
 
         const container = document.createElement('div');
-        container.classList.add('contact-container');
+        container.classList.add('contact-content-container');
 
         const openingHoursContainer = document.createElement('div');
+        openingHoursContainer.classList.add('opening-hours-container');
         for (const [key, value] of Object.entries(data.opening_hours)) {
             const openingDayGroup = document.createElement('div');
             openingDayGroup.classList.add('opening-day-group');
@@ -78,6 +79,7 @@ const Controller = class {
         container.append(openingHoursContainer);
 
         const contactContainer = document.createElement('div');
+        contactContainer.classList.add('contact-container');
         for (const [key, value] of Object.entries(data.contact_info)) {
             const contactGroup = document.createElement('div');
             contactGroup.classList.add('contact-group');
