@@ -23,6 +23,8 @@ export default class Controller {
                 this.swapView(view);
             });
         });
+
+        this.drawHome();
     }    
 
     swapView(view){
