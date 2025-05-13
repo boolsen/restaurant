@@ -20,6 +20,13 @@ module.exports = {
             test: /\.html$/i,
             loader: "html-loader",
         },
+        {
+            test: /\.json$/,
+            type: 'asset/resource',
+            generator: {
+              filename: 'data/[name][ext]' // optional: keeps folder structure
+            }
+        },
     ]
   }
 };

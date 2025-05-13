@@ -79,7 +79,7 @@ header {
       content: '';
       display: block;
       height: 1px;
-      background-color: var(--txt-clr);
+      background-color: var(--accent-clr);
       position: absolute;
       bottom: 0;
       left: 0;
@@ -109,7 +109,6 @@ header {
   .contact-content-container {
     padding-top: 4rem;
     display: grid;
-    gap: 4rem;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -117,6 +116,11 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 3rem;
+  }
+
+  .opening-hours-container {
+    border-right: 1px solid var(--accent-clr);
   }
 
   .contact-group, .opening-day-group {
@@ -167,6 +171,7 @@ header {
     top: -1rem;
     padding: 0px 0.5rem;
     background: var(--bg);
+    color: var(--accent-clr);
 }
 
 .menu-item {
