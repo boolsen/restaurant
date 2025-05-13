@@ -1,0 +1,70 @@
+{
+  "menu": {
+    "snacks": [
+      {
+        "name": "Kimchi Tater Tots",
+        "description": "Crispy tater tots topped with spicy kimchi, scallions, and a sriracha-mayo drizzle.",
+        "price": 6.50,
+        "allergens": ["soy", "egg"]
+      },
+      {
+        "name": "Cheddar Pretzel Bites",
+        "description": "Warm soft pretzel bites served with smoked cheddar hot-dog dip.",
+        "price": 5.75,
+        "allergens": ["gluten", "dairy"]
+      },
+      {
+        "name": "Tempura Corn Dog Bites",
+        "description": "Mini hot dog pieces battered in light tempura and served with wasabi mustard.",
+        "price": 7.00,
+        "allergens": ["gluten", "egg", "soy"]
+      }
+    ],
+    "hot_dogs": [
+      {
+        "name": "Tokyo Street Dog",
+        "description": "All-beef hot dog topped with teriyaki glaze, nori flakes, pickled daikon, and wasabi mayo.",
+        "price": 9.50,
+        "allergens": ["soy", "egg", "gluten"]
+      },
+      {
+        "name": "Tex-Mex Fusion Dog",
+        "description": "Beef hot dog with jalapeño queso, guacamole, pico de gallo, and crushed tortilla chips.",
+        "price": 9.25,
+        "allergens": ["dairy"]
+      },
+      {
+        "name": "Currywurst Reboot",
+        "description": "Pork hot dog topped with curried ketchup, sautéed onions, and sweet mustard aioli.",
+        "price": 8.75,
+        "allergens": ["egg", "mustard"]
+      },
+      {
+        "name": "Banh Mi Dog",
+        "description": "Hot dog with pickled carrots, cucumber, cilantro, sriracha mayo, and pork pâté spread.",
+        "price": 9.75,
+        "allergens": ["soy", "egg", "gluten"]
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Churro Dog Bites",
+        "description": "Sweet mini hot dog pastry bites in churro dough with cinnamon sugar and chocolate dip.",
+        "price": 6.25,
+        "allergens": ["gluten", "dairy", "egg"]
+      },
+      {
+        "name": "PB&J Dog Sundae",
+        "description": "Vanilla ice cream topped with peanut butter sauce, berry compote, and hot dog crumbles.",
+        "price": 6.75,
+        "allergens": ["peanuts", "dairy"]
+      },
+      {
+        "name": "Maple Bacon Donut Dog",
+        "description": "Glazed donut bun with a maple sausage link, candied bacon, and powdered sugar.",
+        "price": 7.50,
+        "allergens": ["gluten", "egg", "dairy"]
+      }
+    ]
+  }
+}
